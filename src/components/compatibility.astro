@@ -4,86 +4,59 @@ import ContentSection from "~/components/content-section.astro";
 import type { CompatibilityItem } from "~/types";
 
 const frameworks: Array<CompatibilityItem> = [
+  // ... (other items unchanged)
   {
-    title: "React",
-    icon: "frameworks/react",
-    url: "https://reactjs.org/",
+    title: "Homelab",
+    icon: "frameworks/react",  // Placeholder icon
+    url: "#",
   },
   {
-    title: "Preact",
-    icon: "frameworks/preact",
-    url: "https://preactjs.com/",
+    title: "Tech",
+    icon: "frameworks/react",  // Placeholder icon
+    url: "#",
   },
   {
-    title: "Svelte",
-    icon: "frameworks/svelte",
-    url: "https://svelte.dev/",
+    title: "Projects",
+    icon: "frameworks/react",  // Placeholder icon
+    url: "#",
   },
   {
-    title: "Vue",
-    icon: "frameworks/vue",
-    url: "https://vuejs.org/",
+    title: "Virtualization",
+    icon: "frameworks/react",  // Placeholder icon
+    url: "#",
   },
   {
-    title: "Solid",
-    icon: "frameworks/solid",
-    url: "https://www.solidjs.com/",
-  },
-  {
-    title: "Lit",
-    icon: "frameworks/lit",
-    url: "https://lit.dev/",
+    title: "Networking",
+    icon: "frameworks/react",  // Placeholder icon
+    url: "#",
   },
 ];
 
 const platforms: Array<CompatibilityItem> = [
+  // ... (other items unchanged)
   {
-    title: "Netlify",
-    icon: "platforms/netlify",
-    url: "https://www.netlify.com/",
+    title: "AnotherPlatform",
+    icon: "fa-brands:cloudflare",  // Placeholder icon
+    url: "#",
   },
-  {
-    title: "Vercel",
-    icon: "platforms/vercel",
-    url: "https://vercel.com/",
-  },
-  {
-    title: "Cloudflare",
-    icon: "fa-brands:cloudflare",
-    url: "https://pages.cloudflare.com/",
-  },
-  {
-    title: "Render",
-    icon: "platforms/render",
-    url: "https://render.com/",
-  },
-  {
-    title: "GitHub",
-    icon: "fa-brands:github",
-    url: "https://pages.github.com/",
-  },
-  {
-    title: "GitLab",
-    icon: "fa-brands:gitlab",
-    url: "https://docs.gitlab.com/ee/user/project/pages/",
-  },
+  // ... (add more items similarly if required)
 ];
+
 ---
 
-<ContentSection title="Compatibility" id="compatibility">
+<ContentSection title="Blog Highlights" id="blog-highlights">
   <Fragment slot="lead">
-    Astro <span class="text-primary">plays nice</span>. Bring your own UI{" "}
-    <span class="text-primary">framework</span>
-     and deploy to your favorite <span class="text-primary">platform</span>.
+    Dive deep into various <span class="text-primary">categories</span> 
+    and explore trending <span class="text-primary">topics</span> in my blog.
   </Fragment>
   <CompatibilityList
-    items={frameworks}
-    title="Frameworks"
-    url="https://docs.astro.build/core-concepts/framework-components/"
+    items={platforms}
+    title="Categories"
+    url="/blog/categories"
   />
   <CompatibilityList
     items={platforms}
-    title="Platforms"
-    url="https://docs.astro.build/guides/deploy/"
+    title="Popular Topics"
+    url="/blog/topics"
   />
 </ContentSection>

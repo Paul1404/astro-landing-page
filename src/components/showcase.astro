@@ -1,31 +1,16 @@
 ---
-import { getCollection } from "astro:content";
 import ContentSection from "~/components/content-section.astro";
-import ShowcaseCard from "~/components/showcase-card.astro";
-
-const featuredSites = await getCollection(
-  "showcase",
-  ({ data }) => "featured" in data,
-);
-const orderedSites = featuredSites.sort(
-  (a, b) => a.data.featured! - b.data.featured!,
-);
 ---
 
-<ContentSection title="Showcase" id="showcase">
+<ContentSection title="Documentation" id="documentation">
   <Fragment slot="lead">
-    Astro is <span class="text-primary">versatile</span>.{" "}
-    <span class="text-primary">Explore</span> what's possible and get{" "}
-    <span class="text-primary">inspired</span>.
+    Dive deep into our <span class="text-primary">documentation</span> and learn all about <span class="text-primary">pd-portfolio.net</span>.
   </Fragment>
   <div class="max-w-6xl space-y-2">
-    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-      {orderedSites.map((site) => <ShowcaseCard site={site} />)}
+    <div class="text-center p-8 border hover:shadow-lg">
+      <h4 class="text-lg font-bold mb-4">Discover the Full Documentation</h4>
+      <p>Explore detailed articles, guides, and tips to make the most of your portfolio.</p>
+      <a href="https://docs.pd-portfolio.net" class="text-primary mt-4 block text-lg">Visit Documentation &rarr;</a>
     </div>
-    <p class="text-right text-sm">
-      <a class="text-primary" href="https://astro.build/showcase/">
-        ...and more &rarr;
-      </a>
-    </p>
   </div>
 </ContentSection>
