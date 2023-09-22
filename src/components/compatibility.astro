@@ -3,45 +3,22 @@ import CompatibilityList from "~/components/compatibility-list.astro";
 import ContentSection from "~/components/content-section.astro";
 import type { CompatibilityItem } from "~/types";
 
-const frameworks: Array<CompatibilityItem> = [
-  // ... (other items unchanged)
-  {
-    title: "Homelab",
-    icon: "frameworks/react",  // Placeholder icon
-    url: "#",
-  },
-  {
-    title: "Tech",
-    icon: "frameworks/react",  // Placeholder icon
-    url: "#",
-  },
-  {
-    title: "Projects",
-    icon: "frameworks/react",  // Placeholder icon
-    url: "#",
-  },
-  {
-    title: "Virtualization",
-    icon: "frameworks/react",  // Placeholder icon
-    url: "#",
-  },
-  {
-    title: "Networking",
-    icon: "frameworks/react",  // Placeholder icon
-    url: "#",
-  },
+const categories: Array<CompatibilityItem> = [
+  { title: "Homelab",        icon: "cloud", url: "#"},
+  { title: "Tech",           icon: "hard-drives", url: "#"},
+  { title: "Projects",       icon: "projector-screen", url: "#"},
+  { title: "Virtualization", icon: "tree-structure", url: "#"},
+  { title: "Networking",     icon: "cell-signal-full", url: "#"},
+  // ... add more categories if needed
 ];
 
-const platforms: Array<CompatibilityItem> = [
-  // ... (other items unchanged)
-  {
-    title: "AnotherPlatform",
-    icon: "fa-brands:cloudflare",  // Placeholder icon
-    url: "#",
-  },
-  // ... (add more items similarly if required)
+const topics: Array<CompatibilityItem> = [
+  { title: "Cloudflare Tunnel", icon: "cloud-check", url: "#"},
+  // ... add more topics as needed
 ];
 
+// Use generic 'globe' until specific icons are available.
+// Replace 'globe' with actual paths to your icons once available.
 ---
 
 <ContentSection title="Blog Highlights" id="blog-highlights">
@@ -50,13 +27,8 @@ const platforms: Array<CompatibilityItem> = [
     and explore trending <span class="text-primary">topics</span> in my blog.
   </Fragment>
   <CompatibilityList
-    items={platforms}
+    items={categories}
     title="Categories"
-    url="/blog/categories"
-  />
-  <CompatibilityList
-    items={platforms}
-    title="Popular Topics"
-    url="/blog/topics"
+    url="https://blog.pd-portfolio.net/blog/"
   />
 </ContentSection>
